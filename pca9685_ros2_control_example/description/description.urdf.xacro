@@ -2,6 +2,23 @@
 
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="pca9685_example">
 
+  <xacro:macro name="link" params="id">
+    <link name="link_${id}"/>
+    <joint name="joint_${id}" type="continuous">
+      <parent link="base_link" />
+      <child link="link_${id}" />
+    </joint>
+  </xacro:macro>
+
+  <link name="base_link"/>
+
+  <xacro:link id="0"/>
+  <xacro:link id="1"/>
+  <xacro:link id="2"/>
+  <xacro:link id="3"/>
+  <xacro:link id="4"/>
+  <xacro:link id="5"/>
+
   <ros2_control name="pca9685_ros2_control_example" type="system">
     <hardware>
       <plugin>pca9685_hardware_interface/Pca9685SystemHardware</plugin>
