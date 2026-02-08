@@ -58,7 +58,7 @@ hardware_interface::CallbackReturn Pca9685SystemHardware::on_init(
 std::vector<hardware_interface::StateInterface> Pca9685SystemHardware::export_state_interfaces()
 {
   std::vector<hardware_interface::StateInterface> state_interfaces;
-  
+
   for (auto i = 0u; i < info_.joints.size(); i++)
   {
     state_interfaces.emplace_back(hardware_interface::StateInterface(
