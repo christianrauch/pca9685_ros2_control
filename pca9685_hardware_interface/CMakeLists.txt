@@ -30,7 +30,6 @@ add_library(
   SHARED
   src/pca9685_system.cpp
   src/pca9685_comm.cpp
-  src/I2CPeripheral.cpp
 )
 
 target_compile_features(pca9685_hardware_interface PUBLIC cxx_std_17)
