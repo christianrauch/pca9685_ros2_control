@@ -29,7 +29,6 @@ add_library(
   pca9685_hardware_interface
   SHARED
   src/pca9685_system.cpp
-  src/pca9685_comm.cpp
 )
 
 target_compile_features(pca9685_hardware_interface PUBLIC cxx_std_17)
